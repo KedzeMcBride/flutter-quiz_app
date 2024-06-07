@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/constants.dart';
-import 'package:quiz_app/controllers/question_controller.dart';
 import 'package:quiz_app/screens/quiz/quiz_screen.dart';
 import 'package:flutter_svg/svg.dart';
 
 class LandingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    QuestionController _qnController = Get.put(QuestionController());
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
