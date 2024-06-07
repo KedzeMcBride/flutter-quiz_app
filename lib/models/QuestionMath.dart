@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:quiz_app/screens/score/score_screen.dart';
+import 'package:quiz_app/screens/score/score_screenm.dart';
 
 // Defining the Question class with required parameters
 class QuestionMath {
@@ -21,73 +21,71 @@ const List sample_data = [
   {
     "id": 1,
     "question":
-        "1. The basic unit of life that carries out activities on its own is?",
-    "options": ['Tissue', 'Cell', 'Organ', 'System'],
+        "1. An arithmetic progression (AP) has first term 5 and common difference 2 What is the sum of the first 10 terms?",
+    "options": ['100', '120', '210', '70'],
     "answer_index": 1,
   },
   {
     "id": 2,
-    "question": "2. Which of the following is a by-product of photosynthesis?",
-    "options": ['Helium', 'Nitrogen', 'CO2', 'Oxygen'],
+    "question":
+        "2. If the first term of a geometric progression (GP) is 2 and the common ratio is 3, what is the fifth term",
+    "options": ['79', '82', '43', '54'],
     "answer_index": 3,
   },
   {
     "id": 3,
     "question":
-        "The process by which food is broken down to release energy is?",
-    "options": ['Photosynthesis', 'Respiration', 'Mitosis', 'Meiosis'],
+        "The general solution of the differential equation dxdy​=ky depends on ?",
+    "options": ['only x', 'both x and y', 'none of these', 'only y'],
     "answer_index": 1,
   },
   {
     "id": 4,
     "question":
-        "Which of the following is not a function of the human skeleton?",
-    "options": [
-      'Secretion of hormones',
-      'Provides support and body posture',
-      'Stores minerals',
-      'Produces RBC'
-    ],
+        " The order of the differential equation  dx2d2y​+3dxdy​+2y=0 is?",
+    "options": ['2', '3', '1', '5'],
     "answer_index": 0,
   },
   {
     "id": 5,
-    "question": "Which organ is used for bile production?",
-    "options": ['Heart', 'Lung', 'Liver', 'Kidney'],
-    "answer_index": 2,
+    "question":
+        "A fair die is rolled twice. What is the probability of getting a sum of 8?",
+    "options": ["5/36", "1/6", "1/12", "1/18"],
+    "answer_index": 0,
   },
   {
     "id": 6,
     "question":
-        " The process by which living organisms obtain characteristics from parents is called?",
-    "options": [' Metabolism', 'Adaptation', 'Evolution', 'Heredity'],
-    "answer_index": 3,
+        "The population mean is 50 with a standard deviation of 10. What is the z-score for a value of 70?",
+    "options": ["2", "1", "0", "-1"],
+    "answer_index": 0,
   },
   {
     "id": 7,
     "question":
-        " What is the number of chromosomes needed to form a human embryo?",
-    "options": ['46', '58', '40', ' 23'],
-    "answer_index": 0,
-  },
-  {
-    "id": 8,
-    "question":
-        "What gas is broken down at the root nodules of leguminous plants?",
-    "options": ['CO2', 'Nitrogen', 'Helium', 'Fluorine'],
+        "A box contains 3 red balls and 2 green balls. If two balls are drawn at random, what is the probability that both are red?",
+    "options": ["1/10", "3/10", "1/2", "3/5"],
     "answer_index": 1,
   },
   {
-    "id": 9,
-    "question": "The building block of a protein molecule is called?",
-    "options": ['Peptides', 'Glucose', 'Aldehydes', 'Amino acids'],
+    "id": 8,
+    "question": "What is the solution to the integral ( int 1/x dx )?",
+    "options": ["1/x^2 dx ", " e^x + C ", " x ln|x| + C ", "ln|x| + C "],
     "answer_index": 3,
   },
   {
+    "id": 9,
+    "question":
+        "In a normal distribution, what percentage of data falls within one standard deviation from the mean?",
+    "options": ["9.5%", "95%", "68%", "50%"],
+    "answer_index": 2,
+  },
+  {
     "id": 10,
-    "question": "what is the chemical formula for glucose",
-    "options": ['C6H12O6', 'C2H4O2', 'C6H12H12', 'C6O6'],
-    "answer_index": 0,
+    "question":
+        "If the odds of an event happening are 1 in 5, what is the probability of the event not happening?",
+    "options": ["20%", "25%", "80%", "75%"],
+    "answer_index": 2,
   },
 ];
 
@@ -168,7 +166,7 @@ class YourController extends GetxController
       _animationController.reset();
       _animationController.forward().whenComplete(nextQuestion);
     } else {
-      Get.to(ScoreScreen());
+      Get.to(ScoreScreenM());
     }
   }
 

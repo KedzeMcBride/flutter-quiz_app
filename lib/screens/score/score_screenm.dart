@@ -4,7 +4,7 @@ import 'package:quiz_app/constants.dart';
 import 'package:quiz_app/controllers/controller_math.dart';
 import 'package:flutter_svg/svg.dart';
 
-class ScoreScreen extends StatelessWidget {
+class ScoreScreenM extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     QuestionControllerMath _qnController = Get.put(QuestionControllerMath());
