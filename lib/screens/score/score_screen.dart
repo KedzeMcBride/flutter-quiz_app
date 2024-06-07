@@ -19,17 +19,19 @@ class ScoreScreen extends StatelessWidget {
               Text(
                 "Score",
                 style: Theme.of(context)
-                    .textTheme
-                    .headline3
-                    .copyWith(color: kSecondaryColor),
+                        .textTheme
+                        .displaySmall // Updated to displaySmall
+                        ?.copyWith(color: kSecondaryColor) ??
+                    TextStyle(), // Use of null-aware operator and fallback to default TextStyle
               ),
               Spacer(),
               Text(
                 "${_qnController.correctAns * 10}/${_qnController.questions.length * 10}",
                 style: Theme.of(context)
-                    .textTheme
-                    .headline4
-                    .copyWith(color: kSecondaryColor),
+                        .textTheme
+                        .headlineMedium // Updated to headlineMedium
+                        ?.copyWith(color: kSecondaryColor) ??
+                    TextStyle(), // Use of null-aware operator and fallback to default TextStyle
               ),
               Spacer(flex: 3),
             ],

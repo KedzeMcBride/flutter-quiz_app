@@ -17,13 +17,15 @@ class WelcomeScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Spacer(flex: 2), //2/6
+                  Spacer(flex: 2), // 2/6
                   Text(
                     "Let's Play Quiz,",
-                    style: Theme.of(context).textTheme.headline4.copyWith(
-                        color: Colors.white, fontWeight: FontWeight.bold),
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
                   ),
-                  Text("Enter your informations below"),
+                  Text("Enter your information below"),
                   Spacer(), // 1/6
                   TextField(
                     decoration: InputDecoration(
@@ -47,15 +49,16 @@ class WelcomeScreen extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
                       child: Text(
-                        "Lets Start Quiz",
+                        "Let's Start Quiz",
                         style: Theme.of(context)
-                            .textTheme
-                            .button
-                            .copyWith(color: Colors.black),
+                                .textTheme
+                                .button
+                                ?.copyWith(color: Colors.black) ??
+                            TextStyle(color: Colors.black),
                       ),
                     ),
                   ),
-                  Spacer(flex: 2), // it will take 2/6 spaces
+                  Spacer(flex: 2), // It will take 2/6 spaces
                 ],
               ),
             ),

@@ -7,7 +7,7 @@ import '../../../constants.dart';
 
 class ProgressBar extends StatelessWidget {
   const ProgressBar({
-    Key key,
+    required Key key, // Mark 'key' as required
   }) : super(key: key);
 
   @override
@@ -24,7 +24,7 @@ class ProgressBar extends StatelessWidget {
         builder: (controller) {
           return Stack(
             children: [
-              // LayoutBuilder provide us the available space for the conatiner
+              // LayoutBuilder provides us the available space for the container
               // constraints.maxWidth needed for our animation
               LayoutBuilder(
                 builder: (context, constraints) => Container(

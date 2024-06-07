@@ -8,9 +8,8 @@ import 'option.dart';
 
 class QuestionCard extends StatelessWidget {
   const QuestionCard({
-    Key key,
-    // it means we have to pass this
-    @required this.question,
+    Key? key, // Make Key nullable
+    required this.question, // Use required keyword
   }) : super(key: key);
 
   final Question question;
@@ -30,9 +29,10 @@ class QuestionCard extends StatelessWidget {
           Text(
             question.question,
             style: Theme.of(context)
-                .textTheme
-                .headline6
-                .copyWith(color: kBlackColor),
+                    .textTheme
+                    .titleLarge // Updated to titleLarge
+                    ?.copyWith(color: kBlackColor) ??
+                TextStyle(), // Use null-aware operators
           ),
           SizedBox(height: kDefaultPadding / 2),
           ...List.generate(
