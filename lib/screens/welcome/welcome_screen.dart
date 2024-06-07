@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/constants.dart';
-import 'package:quiz_app/screens/quiz/quiz_screen.dart';
+//import 'package:quiz_app/screens/quiz/quiz_screen.dart';
+import 'package:quiz_app/screens/welcome/option.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override
@@ -31,7 +32,7 @@ class WelcomeScreen extends StatelessWidget {
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Color(0xFF1C2341),
-                      hintText: "Full Name",
+                      hintText: "Player Name",
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
@@ -39,7 +40,8 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   Spacer(), // 1/6
                   InkWell(
-                    onTap: () => Get.to(QuizScreen()),
+                    onTap: () => Get.to(
+                        SubjectSelectionScreen()), //loads quiz_screen & selection screen
                     child: Container(
                       width: double.infinity,
                       alignment: Alignment.center,
