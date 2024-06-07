@@ -3,12 +3,12 @@ import 'package:get/get.dart';
 import 'package:quiz_app/screens/score/score_screen.dart';
 
 // Defining the Question class with required parameters
-class Question {
+class QuestionMath {
   final int id, answer;
   final String question;
   final List<String> options;
 
-  Question({
+  QuestionMath({
     required this.id,
     required this.question,
     required this.answer,
@@ -98,9 +98,9 @@ class YourController extends GetxController
   late Animation _animation;
   late PageController _pageController;
 
-  final List<Question> _questions = sample_data
+  final List<QuestionMath> _questions = sample_data
       .map(
-        (question) => Question(
+        (question) => QuestionMath(
             id: question['id'],
             question: question['question'],
             options: question['options'],
@@ -116,7 +116,7 @@ class YourController extends GetxController
 
   Animation get animation => this._animation;
   PageController get pageController => this._pageController;
-  List<Question> get questions => this._questions;
+  List<QuestionMath> get questions => this._questions;
   bool get isAnswered => this._isAnswered;
   int get correctAns => this._correctAns!;
   int get selectedAns => this._selectedAns!;
@@ -144,7 +144,7 @@ class YourController extends GetxController
     _pageController.dispose();
   }
 
-  void checkAns(Question question, int selectedIndex) {
+  void checkAns(QuestionMath question, int selectedIndex) {
     _isAnswered = true;
     _correctAns = question.answer;
     _selectedAns = selectedIndex;

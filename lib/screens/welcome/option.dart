@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/screens/quiz/components/quiz_screenm.dart';
 
 import '../quiz/quiz_screen.dart';
 
@@ -87,7 +88,12 @@ class _SubjectSelectionScreenState extends State<SubjectSelectionScreen>
                           Size(200, 60)), // Set the minWidth and height
                     ),
                     onPressed: () {
-                      // Navigate to Math Quiz
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                QuizScreenM()), // Navigate to Screen class
+                      );
                     },
                     child: Text('MATHS'),
                   );
