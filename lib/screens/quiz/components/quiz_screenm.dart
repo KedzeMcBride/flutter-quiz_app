@@ -25,7 +25,7 @@ class QuizScreenM extends StatelessWidget {
           ),
         ],
       ),
-      body: Bodym(),
+      body: math_body(),
     );
   }
 }

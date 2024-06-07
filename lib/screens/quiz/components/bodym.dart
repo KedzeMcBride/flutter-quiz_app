@@ -7,8 +7,8 @@ import 'package:flutter_svg/svg.dart';
 import 'progress_bar.dart';
 import 'question_card.dart';
 
-class Bodym extends StatelessWidget {
-  const Bodym({
+class math_body extends StatelessWidget {
+  const math_body({
     Key? key, // Updated to Key?
   }) : super(key: key);
 

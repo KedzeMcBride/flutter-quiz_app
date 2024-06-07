@@ -21,7 +21,7 @@ const List sample_data = [
   {
     "id": 1,
     "question":
-        "1. An arithmetic progression (AP) has first term 5 and common difference 2 What is the sum of the first 10 terms?",
+        "1. An arithmetic progression (AsP) has first term 5 and common difference 2 What is the sum of the first 10 terms?",
     "options": ['100', '120', '210', '70'],
     "answer_index": 1,
   },
