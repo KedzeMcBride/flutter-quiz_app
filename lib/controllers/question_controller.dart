@@ -1,6 +1,5 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:get/state_manager.dart';
 import 'package:quiz_app/models/Questions.dart';
 import 'package:quiz_app/screens/score/score_screen.dart';
 
@@ -10,12 +9,12 @@ class QuestionController extends GetxController
     with SingleGetTickerProviderMixin {
   // Lets animated our progress bar
 
-  AnimationController _animationController;
-  Animation _animation;
+  late AnimationController _animationController;
+  late Animation _animation;
   // so that we can access our animation outside
   Animation get animation => this._animation;
 
-  PageController _pageController;
+  late PageController _pageController;
   PageController get pageController => this._pageController;
 
   List<Question> _questions = sample_data
@@ -32,10 +31,10 @@ class QuestionController extends GetxController
   bool _isAnswered = false;
   bool get isAnswered => this._isAnswered;
 
-  int _correctAns;
+  late int _correctAns;
   int get correctAns => this._correctAns;
 
-  int _selectedAns;
+  late int _selectedAns;
   int get selectedAns => this._selectedAns;
 
   // for more about obs please check documentation

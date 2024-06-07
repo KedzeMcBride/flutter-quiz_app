@@ -20,7 +20,7 @@ class WelcomeScreen extends StatelessWidget {
                   Spacer(flex: 2), //2/6
                   Text(
                     "Let's Play Quiz,",
-                    style: Theme.of(context).textTheme.headline4.copyWith(
+                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                   Text("Enter your informations below"),
@@ -50,8 +50,8 @@ class WelcomeScreen extends StatelessWidget {
                         "Lets Start Quiz",
                         style: Theme.of(context)
                             .textTheme
-                            .button
-                            .copyWith(color: Colors.black),
+                            .labelLarge
+                            ?.copyWith(color: Colors.black),
                       ),
                     ),
                   ),
