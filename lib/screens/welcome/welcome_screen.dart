@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/constants.dart';
-import 'package:quiz_app/screens/quiz/quiz_screen.dart';
+import 'package:quiz_app/screens/landing/landing_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override
@@ -19,25 +19,25 @@ class WelcomeScreen extends StatelessWidget {
                 children: [
                   Spacer(flex: 2), //2/6
                   Text(
-                    "Let's Play Quiz,",
+                    "Welcome to Quiz App ${displayName}",
                     style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
-                  Text("Enter your informations below"),
-                  Spacer(), // 1/6
-                  TextField(
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Color(0xFF1C2341),
-                      hintText: "Full Name",
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(12)),
-                      ),
-                    ),
-                  ),
-                  Spacer(), // 1/6
+                  // Text("Enter your informations below"),
+                  // Spacer(), // 1/6
+                  // TextField(
+                  //   decoration: InputDecoration(
+                  //     filled: true,
+                  //     fillColor: Color(0xFF1C2341),
+                  //     hintText: "Full Name",
+                  //     border: OutlineInputBorder(
+                  //       borderRadius: BorderRadius.all(Radius.circular(12)),
+                  //     ),
+                  //   ),
+                  // ),
+                  Spacer(flex: 2), // 2/6
                   InkWell(
-                    onTap: () => Get.to(QuizScreen()),
+                    onTap: () => Get.to(LandingScreen()),
                     child: Container(
                       width: double.infinity,
                       alignment: Alignment.center,

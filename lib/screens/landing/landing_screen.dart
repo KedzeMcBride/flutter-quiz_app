@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/constants.dart';
 import 'package:quiz_app/controllers/question_controller.dart';
+import 'package:quiz_app/screens/quiz/quiz_screen.dart';
 import 'package:flutter_svg/svg.dart';
 
 class LandingScreen extends StatelessWidget {
@@ -17,19 +18,31 @@ class LandingScreen extends StatelessWidget {
             children: [
               Spacer(flex: 3),
               Text(
-                "Score",
+                "Landing Page",
                 style: Theme.of(context)
                     .textTheme
                     .displaySmall
                     ?.copyWith(color: kSecondaryColor),
               ),
               Spacer(),
-              Text(
-                "${_qnController.correctAns * 10}/${_qnController.questions.length * 10}",
-                style: Theme.of(context)
-                    .textTheme
-                    .headlineMedium
-                    ?.copyWith(color: kSecondaryColor),
+              InkWell(
+                onTap: () => Get.to(QuizScreen()),
+                child: Container(
+                  width: double.infinity,
+                  alignment: Alignment.center,
+                  padding: EdgeInsets.all(kDefaultPadding * 0.75), // 15
+                  decoration: BoxDecoration(
+                    gradient: kPrimaryGradient,
+                    borderRadius: BorderRadius.all(Radius.circular(12)),
+                  ),
+                  child: Text(
+                    "Lets Start Quiz",
+                    style: Theme.of(context)
+                        .textTheme
+                        .labelLarge
+                        ?.copyWith(color: Colors.black),
+                  ),
+                ),
               ),
               Spacer(flex: 3),
             ],
